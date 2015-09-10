@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CartoDB Translator</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+        body {
+        padding: 10px;
+    }
+    
+    .title {
+        display: inline-block;
+    }
+    
+    .titleLogo {
+        float: left;
+        margin-right: 10px;
+    }
+    #status {
+        font-size: 18px;
+        margin-top:15px;
+        width: 100px;
+        padding: 5px;
+        background-color: #2E3C43;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1 class="title"><img class="titleLogo" src="logo.png" alt="CartoDB" /> CartoDB Translator</h1>
+    </div>
+    
+    Default Language:
+    <select id="language">
+        <option value="en">English</option>
+        <option value="jp">Japanese (日本語)</option>
+        <option value="es">Spanish (Español)</option>
+    </select>
+    <br/>
+    <br/>
+    <button id="save">Save</button>
+
+    <div id="status"></div>    
+
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>

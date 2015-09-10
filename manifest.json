@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "CartoDB Translator",
+    "version": "0.0.1",
+    "description": "Used to view CartoDB in different languages",
+    "options_page": "options.html",
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "https://*.cartodb.com/dashboard/*",
+            "https://*.cartodb.com/viz/*",
+            "https://*.cartodb.com/maps/*",
+            "https://*.cartodb.com/login/*",
+            "https://*.cartodb.com/sessions/*",
+            "https://*.cartodb.com/u/*"
+            ],
+        "js": ["jquery-2.1.4.min.js", "jquery.i18n.min.js", "i18n-cdb-translate.js", "code.js"],
+        "run_at": "document_end"
+    }],
+    "web_accessible_resources": [
+        "*.i18n.js"
+    ],
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png"
+    }
+}
