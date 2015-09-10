@@ -69,7 +69,9 @@ var cdb_lang_file = {
     "Apply query": "クエリを適用します",
     "Custom SQL query": "カスタムSQLクエリ",
     "Add layer": "レイヤを追加",
-    "Your dashboard": "あなたのダッシュボード"
+    "Your dashboard": "あなたのダッシュボード",
+    "Filters": "フィルタ",
+    "width": "幅"
 }
 
 var input = document.createElement("input");
