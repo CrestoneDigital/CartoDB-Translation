@@ -71,7 +71,23 @@ var cdb_lang_file = {
     "Add layer": "レイヤを追加",
     "Your dashboard": "あなたのダッシュボード",
     "Filters": "フィルタ",
-    "width": "幅"
+    "width": "幅",
+    "Map layer wizard": "地図層ウィザード",
+	"Marker Fill": "マーカー塗りつぶし",
+	"Marker Stroke": "マーカーストローク",
+	"Composite operation": "複合操作",
+	"Label Text": "ラベルテキスト",
+	"Enable your legend by selecting a template from the selector above": "上記セレクタからテンプレートを選択して、凡例を有効にします。",
+	"Template": "テンプレート",
+	"You are about to delete a row": "あなたは行を削除しようとしています",
+	"Are you sure you want to delete it?": "あなたはそれを削除してもよろしいですか？",
+	"cancel": "キャンセル",
+	"Ok, delete": "[OK]を、削除します",
+	"You are part of CartoDB, you deserve an outstanding support": "あなたがCartoDBの一部である、あなたは、優れたサポートを受けるに値します",
+	"Add a new layer": "新規レイヤーを追加します。",
+	"Select an existing dataset or connect a new one": "既存のデータセットを選択するか、新しいものを接続します",
+	"Add an empty layer": "空のレイヤーを追加",
+	"simple": "簡単"
 }
 
 var input = document.createElement("input");
