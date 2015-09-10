@@ -3,7 +3,7 @@ chrome.storage.sync.get({
 }, function(items) {
     if (items.language != 'en') {
         var s = document.createElement("script");
-        s.src = "chrome-extension://" + chrome.runtime.id + "/" + items.language + ".i18n.js";
+        s.src = "chrome-extension://" + chrome.runtime.id + "/languages/" + items.language + ".i18n.js";
         document.body.appendChild(s);
         
         setTimeout(function() {
