@@ -163,7 +163,23 @@ var cdb_lang_file = {
 	"Pricing": "価格決定",
 	"Resources": "リソース",
 	"Blog": "ブログ",
-	"Academy": "アカデミー"
+	"Academy": "アカデミー",
+	"Add Element": "要素を追加します",
+	"Add title item": "タイトル項目を追加します。",
+	"Add text item": "テキストアイテムを追加します",
+	"Add annotation item": "注釈項目を追加します。",
+	"Add image item": "画像アイテムを追加します。",
+	"Desktop": "デスクトップ",
+	"Mobile": "",
+	"": "",
+	"": "",
+	"": "",
+	"": "",
+	"": "",
+	"": "",
+	"": "",
+	"": ""
+	
 		
 	
 }
