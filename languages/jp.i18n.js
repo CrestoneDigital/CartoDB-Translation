@@ -339,7 +339,36 @@ var cdb_lang_file = {
 	"You have reached the maximum number of geocode operations allotted for this month.": "あなたは今月に割り当てられジオコード操作の最大数に達しました。",
 	"Contact Sales if you need to increase the number of your geocoding credits before your next billing cycle starts, in 3 days.": "連絡先の売上高は、あなたが3日で、あなたの次の請求サイクルが始まる前に、ジオコーディングクレジットの数を増やす必要がある場合。",
 	"Locking this map will hide it from the dashboard. Reveal it using the header menu or the bottom link.": "このマップをロックすると、ダッシュボードからそれを隠します。ヘッダメニューまたは下部のリンクを使用してそれを公開します。",
+	"You are about to lock 1 map.": "あなたは1地図をロックしようとしています。",
+	"Ok, lock": "[OK]を、ロック",
+	"Duplicating your map": "マップの複製",
+	""A map is the greatest of all epic poems. Its lines and colors show the realization of great dreams."": ""マップは、すべての叙事詩の最大のであり、その線や色が大きな夢の実現を示しています。」",
+	"Although we believe in the power of open data, you can also protect your map.": "我々が開いているデータの力を信じていますが、また、あなたのマップを保護することができます。",
+	"Public": "公開",
+	"Everyone can view and download it": "誰もが見て、それをダウンロードすることができます",
+	"With link": "リンクで",
+	"Only the people with the link can view it": "リンクだけを持つ人々は、それを表示することができます",
+	"Password protected": "パスワード保護されました",
+	"Only you can access it": "あなただけがそれにアクセスすることができます",
+	"Save settings": "設定を保存",
+	"The deleted map cannot be recovered, be sure before proceeding.": "回復することはできません削除されたマップは、続行する前に確認してください。",
+	"Map your engagement using the MailChimp Connector.": "MailChimpコネクタを使用して、あなたの婚約の地図。",
+	"Create maps for showing events over time": "時間をかけてイベントを表示するためのマップを作成します。",
+	"Create a map with a video-tutorial": "ビデオチュートリアルでマップを作成します。",
+	"We can help you to create your map with one of our video-tutorials.": "あなたが私たちのビデオチュートリアルのいずれかを使用して、マップを作成するのを助けることができます。",
+	"Create animated maps": "アニメーションマップを作成します。",
+	"Learn how to animate your data, by using historic United States tornado data.": "歴史的な米国の竜巻のデータを用いて、あなたのデータをアニメーション化する方法を学びます。",
+	"View resulting map": "表示結果のマップ",
+	"Get  dataset": "データセットを取得します",
+	"Take your time to watch this tutorial or skip it and start creating your map now": "このチュートリアルを見るためにあなたの時間を取るか、それをスキップして、今あなたのマップの作成を開始",
+	"start guided tutorial": "ガイド付きのチュートリアルを開始",
+	"Animate the life of a cat": "猫の人生をアニメーション",
+	"Let's take a look at one week of movements for a cat named Spencer. Using GPS collected data, we can animate Spencer over time to see his patterns of exploration in his neighborhood.": "のはスペンサーという名前の猫のための運動の一週間を見てみましょう。データ収集、GPSを使用して、我々は彼の周辺に探査の彼のパターンを見るために時間をかけスペンサーをアニメーション化することができます。",
+	"Create your own data using the CartoDB Editor": "CartoDBエディタを使用して、独自のデータを作成します。",
+	"Learn to create your own point, line, or polygon dataset directly in the CartoDB editor.": "CartoDBエディタで直接、独自のポイント、ライン、またはポリゴンデータセットを作成するにはこちらをご覧ください。",
 	"": ""
+	
+	
 		
 }
 
