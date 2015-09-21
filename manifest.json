@@ -11,6 +11,7 @@
         "matches": [
             "https://*.cartodb.com/dashboard/*",
             "https://*.cartodb.com/viz/*",
+            "https://*.cartodb.com/tables/*",
             "https://*.cartodb.com/maps/*",
             "https://*.cartodb.com/login/*",
             "https://*.cartodb.com/sessions/*",
