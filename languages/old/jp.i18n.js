@@ -1,4 +1,6 @@
-var cdb_lang_file = {
+var cdb_lang_file = 
+//start
+{
     "Login to CartoDB": "CartoDBにログイン",
     "Login with Google": "グーグルでログイン",
     "Login": "ログイン",
@@ -632,6 +634,7 @@ var cdb_lang_file = {
     
     
 }
+//end
 
 var input = document.createElement("input");
 input.setAttribute("type", "hidden");
