@@ -389,7 +389,6 @@ var cdb_lang_file =
     "Upload a file or a URL": "ファイルまたはURLをアップロード",
     "Click to select": "クリックして選択します",
     "Delete this...": "これを削除...",
-    "has invalid extension. Only csv, xlx, xlsx, zip, kml, geojson, \json, ods, kmz, gpx, tar, gz, tgz, osm, bz2, tif and tiff are allowed": "無効な拡張子を持っています。のみCSV、XLXは、XLSX、ジッパーは、KMLは、geojsonは、\のJSONは、ODSは、KMZ、GPX、タール、GZ、TGZ、OSM、BZ2、TIFとTIFFが許可されています",
     "There is an error in the URL you've inserted. Please recheck.": "あなたが挿入したURLに誤りがあります。再確認してください。",
     "You have decided cancel the upload, start mapping with other file.": "あなたは、アップロードをキャンセルし、他のファイルとのマッピングを開始することを決定しました。",
     "is too large. You can import files up to": "大きすぎます。あなたは、までのファイルをインポートすることができます",
