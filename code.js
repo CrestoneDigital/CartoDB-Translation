@@ -6,16 +6,26 @@ chrome.storage.sync.get({
         s.src = "chrome-extension://" + chrome.runtime.id + "/languages/" + items.language + ".i18n.js";
         document.body.appendChild(s);
         
-        setTimeout(function() {
+//        setTimeout(function() {
+//            var cdb_lang_file = JSON.parse($('#___cdb_lang_file').val());
+//            $.i18n.load(cdb_lang_file); // Sets the lookup language file
+//            i18nTranslate.translate(); // initial translate when the webpage first loads.
+//        }, 5000);
+
+        window.addEventListener("i18nTranslateReady", function(e){ 
             var cdb_lang_file = JSON.parse($('#___cdb_lang_file').val());
             $.i18n.load(cdb_lang_file); // Sets the lookup language file
             i18nTranslate.translate(); // initial translate when the webpage first loads.
-        }, 1000);
+        });
+
+        window.addEventListener("i18nTranslateShow", function(e){ 
+            i18nTranslate.translate(); // initial translate when the webpage first loads.
+//            i18nTranslate.translate(e.detail);
+        });
         
-        setInterval(function() {
-            console.log("::DOM change, Translating...");
-            i18nTranslate.translate();
-        }, 10000);
+//        setInterval(function() {
+//            i18nTranslate.translate();
+//        }, 1000);
         
     }
 });

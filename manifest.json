@@ -15,7 +15,8 @@
             "https://*.cartodb.com/maps/*",
             "https://*.cartodb.com/login/*",
             "https://*.cartodb.com/sessions/*",
-            "https://*.cartodb.com/u/*"
+            "https://*.cartodb.com/u/*",
+            "https://*.cartodb.com/me/*"
             ],
         "js": ["jquery-2.1.4.min.js", "jquery.i18n.min.js", "i18n-cdb-translate.js", "code.js"],
         "run_at": "document_end"
