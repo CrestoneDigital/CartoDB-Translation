@@ -826,6 +826,15 @@ cdb.geo.ui.Tooltip.prototype.show = function() {
     window.dispatchEvent( ev );
 }
 //
+//var ref13 = $.fn.tipsy().prototype.show;
+//$.fn.tipsy().prototype.show = function() {
+//    console.log("Tipsy", this.$el);
+//    ref13.apply(this, arguments);
+////    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+////    window.dispatchEvent( ev );
+//}
+
+//
 //$(document).ajaxComplete(function () {
 //    console.log("DOM change, Translating...");
 //    setTimeout(function () {

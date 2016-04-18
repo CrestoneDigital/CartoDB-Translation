@@ -5,12 +5,6 @@ chrome.storage.sync.get({
         var s = document.createElement("script");
         s.src = "chrome-extension://" + chrome.runtime.id + "/languages/" + items.language + ".i18n.js";
         document.body.appendChild(s);
-        
-//        setTimeout(function() {
-//            var cdb_lang_file = JSON.parse($('#___cdb_lang_file').val());
-//            $.i18n.load(cdb_lang_file); // Sets the lookup language file
-//            i18nTranslate.translate(); // initial translate when the webpage first loads.
-//        }, 5000);
 
         window.addEventListener("i18nTranslateReady", function(e){ 
             var cdb_lang_file = JSON.parse($('#___cdb_lang_file').val());
@@ -20,12 +14,10 @@ chrome.storage.sync.get({
 
         window.addEventListener("i18nTranslateShow", function(e){ 
             i18nTranslate.translate(); // initial translate when the webpage first loads.
-//            i18nTranslate.translate(e.detail);
         });
         
 //        setInterval(function() {
 //            i18nTranslate.translate();
 //        }, 1000);
-        
     }
 });

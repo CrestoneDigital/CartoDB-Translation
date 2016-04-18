@@ -3,7 +3,6 @@ i18nTranslate = (function () {
 
     function _translate(parentEl) {
         if (parentEl) {
-//            console.log("Translating with restriction...");
             $(parentEl).find('div, a, li, label, input, span, h5, h4, h3, h2, h1, p, button, strong, small').each(function (idx, el) {
                 var tmp = $.i18n._($(el).text().trim());
                 if (tmp != $(el).text().trim() && $(el).children().length == 0) {
@@ -25,7 +24,6 @@ i18nTranslate = (function () {
                 }
             });
         } else {
-//            console.log("Translating whole page...");
             $('div, a, li, label, input, span, h5, h4, h3, h2, h1, p, button, strong, small').each(function (idx, el) {
                 var tmp = $.i18n._($(el).text().trim());
                 if (tmp != $(el).text().trim() && $(el).children().length == 0) {
