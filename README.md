@@ -1,5 +1,5 @@
 # CartoDB-Translation
-Chrome extension to view CartoDB service. You can find the extension in the store at: 
+Chrome extension to view CartoDB service. You can find the extension in the store at: https://chrome.google.com/webstore/detail/cartodb-translator/klfamjcbhhbgcllahleohncpgmcbceeh
 
 # How it works
 When enabled it will let a user adjust the language options to pick a local language.  Once selected, whenever you visit the CartoDB Editor by signing into {account}.cartodb.com it wil translate everything to that language.
