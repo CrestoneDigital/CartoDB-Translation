@@ -1,24 +1,24 @@
 {
     "manifest_version": 2,
-    "name": "CartoDB Translator",
-    "version": "0.0.1",
-    "description": "Used to view CartoDB editor in different languages.  Please visit www.cartodb.com to learn more about mapping in the cloud.  For more information on this project you can visit https://github.com/CrestoneDigital/CartoDB-Translation.",
+    "name": "CARTO Translator",
+    "version": "0.1.0",
+    "description": "Used to view CARTO editor in different languages.  Please visit www.carto.com to learn more about mapping in the cloud.  For more information on this project you can visit https://github.com/CrestoneDigital/CartoDB-Translation.",
     "options_page": "options.html",
     "permissions": [
         "storage"
     ],
     "content_scripts": [{
         "matches": [
-            "https://*.cartodb.com/dashboard/*",
-            "https://*.cartodb.com/viz/*",
-            "https://*.cartodb.com/tables/*",
-            "https://*.cartodb.com/maps/*",
-            "https://*.cartodb.com/login/*",
-            "https://*.cartodb.com/sessions/*",
-            "https://*.cartodb.com/u/*",
-            "https://*.cartodb.com/me/*"
+            "https://*.carto.com/dashboard/*",
+            "https://*.carto.com/viz/*",
+            "https://*.carto.com/tables/*",
+            "https://*.carto.com/maps/*",
+            "https://*.carto.com/login/*",
+            "https://*.carto.com/sessions/*",
+            "https://*.carto.com/u/*",
+            "https://*.carto.com/me/*"
             ],
-        "js": ["jquery-2.1.4.min.js", "jquery.i18n.min.js", "i18n-cdb-translate.js", "code.js"],
+        "js": ["jquery-2.2.4.min.js", "jquery.i18n.min.js", "i18n-cdb-translate.js", "code.js"],
         "run_at": "document_end"
     }],
     "web_accessible_resources": [

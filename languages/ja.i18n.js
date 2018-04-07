@@ -772,7 +772,14 @@ var cdb_lang_file =
 	"ALL": "全て",
 	"CREATE AND CLEAN": "作成およびクリーニング",
 	"ANALYZE AND PREDICT": "解析及び予測",
-	"TRANSFORM": "変換"
+	"TRANSFORM": "変換",
+	"Guides": "_Guides_",
+	"There are no notifications :)": ":(",
+	"New Map": "_New Map_",
+	"Search": "_Search_",
+	"Widgets": "_Widgets_",
+	"Publish": "_Publish_",
+	"All selected": "_All selected_"
 }
 //end
 
@@ -804,13 +811,14 @@ cdb.core.View.prototype.change = function () {
     window.dispatchEvent( ev );
 }
 
-
-var ref1b = cdb.common.TipsyTooltip.prototype.show
-cdb.common.TipsyTooltip.prototype.show = function () {    
-    console.log("cdb.common.TipsyTooltip.show", this.$el);
-    ref1b.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if (cdb.common && cdb.common.TipsyTooltip) {
+	var ref1b = cdb.common.TipsyTooltip.prototype.show
+	cdb.common.TipsyTooltip.prototype.show = function () {    
+		console.log("cdb.common.TipsyTooltip.show", this.$el);
+		ref1b.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}	
 }
 
 var ref2 = cdb.ui.common.Dropdown.prototype.show;
@@ -900,25 +908,3 @@ cdb.geo.ui.Tooltip.prototype.show = function() {
     var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
     window.dispatchEvent( ev );
 }
-//
-//var ref13 = $.fn.tipsy().prototype.show;
-//$.fn.tipsy().prototype.show = function() {
-//    console.log("Tipsy", this.$el);
-//    ref13.apply(this, arguments);
-////    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-////    window.dispatchEvent( ev );
-//}
-
-//
-//$(document).ajaxComplete(function () {
-//    console.log("DOM change, Translating...");
-//    setTimeout(function () {
-//        var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-//        window.dispatchEvent( ev );
-//    }, 600);
-//});
-
-//    window._i18nTranslateRef.push({
-//        id: _i18nTranslateId,
-//        el: this.$el[0]
-//    });
