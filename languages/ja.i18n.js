@@ -779,7 +779,42 @@ var cdb_lang_file =
 	"Search": "_Search_",
 	"Widgets": "_Widgets_",
 	"Publish": "_Publish_",
-	"All selected": "_All selected_"
+	"All selected": "_All selected_",
+	//"As a paying customer, you have access to our dedicated support": "_As a paying customer, you have access to our dedicated support_",
+	//"Remember that there is a lot of information in our community forums": "_Remember that there is a lot of information in our community forums_",
+	//-------Dashboard bottom left
+	//"Show your 1 locked map": "_Show your 1 locked map_",
+	//-------When a map is clicked
+	//"days ago": "_days ago_",
+	//-------In map panel
+	//"Style your layer based on column values": "_Style your layer based on column values_",
+	//"Merge your current dataset with another, existing dataset": "_Merge your current dataset with another, existing dataset_",
+	//"Loading": "_Loading_",
+	//-------When page loads
+	//"Pacific Spatial Solutions Inc. Our specialties are spatial data analysis and tool development、web system design, and GIS training. We are located in the US and Japan and lots of projects are happening in Japan": "_Pacific Spatial Solutions Inc. Our specialties are spatial data analysis and tool development、web system design, and GIS training. We are located in the US and Japan and lots of projects are happening in Japan_",
+	//-------home page before login page
+	//There are no results for the combination of filters applied to your data. Try tweaking your filters, or zoom and pan the map to adjust the Map View": "_There are no results for the combination of filters applied to your data. Try tweaking your filters, or zoom and pan the map to adjust the Map View_",
+	//-------right side middle when a map is Opened
+	//"More Options": "_More Options_",
+	//"Toggle widget": "_Toggle widget_",
+	//"Change map privacy": "_Change map privacy_",
+	//"Rename": "_Rename_",
+	//"Duplicate": "_Duplicate_",
+	//"Download map": "_Download map_",
+	//"Give us feedback": "_Give us feedback_",
+	//"Back to the dashboard": "_Back to the dashboard_",
+	//"New users will have this permission": "_New users will have this permission_",
+	//"Share with colleagues": "_Share with colleagues_",
+	//"Done": "_Done_",
+	//-------Map
+	//"Send to your friends, coworkers, or post it in your social networks": "_Send to your friends, coworkers, or post it in your social networks_",
+	//"Insert your map into your blog, website, or simple application": "_Insert your map into your blog, website, or simple application_",
+	//"Get a simple URL": "_Get a simple URL_",
+	//-------Publish Map
+	//"COPY": "_COPY_",
+	//"Update": "_Update_",
+	//"Search Location": "_Search Location_",
+	//"Apply Auto Style": "_Apply Auto Style_"
 }
 //end
 
