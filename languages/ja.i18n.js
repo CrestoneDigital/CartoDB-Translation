@@ -976,90 +976,109 @@ if (cdb.common && cdb.common.TipsyTooltip) {
 	}	
 }
 
-var ref2 = cdb.ui.common.Dropdown.prototype.show;
-cdb.ui.common.Dropdown.prototype.show = function() {
-    console.log("cdb.ui.common.Dropdown", this.$el[0]);
-    ref2.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if (cdb.ui && cdb.ui.common && cdb.ui.common.Dropdown) {
+	var ref2 = cdb.ui.common.Dropdown.prototype.show;
+	cdb.ui.common.Dropdown.prototype.show = function() {
+		console.log("cdb.ui.common.Dropdown", this.$el[0]);
+		ref2.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref3 = cdb.admin.DropdownMenu.prototype.show;
-cdb.admin.DropdownMenu.prototype.show = function() {
-    console.log("cdb.admin.DropdownMenu", this.$el[0]);
-    ref3.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.admin && cdb.admin.DropdownMenu) {
+	var ref3 = cdb.admin.DropdownMenu.prototype.show;
+	cdb.admin.DropdownMenu.prototype.show = function() {
+		console.log("cdb.admin.DropdownMenu", this.$el[0]);
+		ref3.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref4 = cdb.geo.ui.Text.prototype.show;
-cdb.geo.ui.Text.prototype.show = function() {
-    console.log("cdb.geo.ui.Text", this.$el);
-    ref4.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Text) {
+	var ref4 = cdb.geo.ui.Text.prototype.show;
+	cdb.geo.ui.Text.prototype.show = function() {
+		console.log("cdb.geo.ui.Text", this.$el);
+		ref4.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref5 = cdb.geo.ui.Annotation.prototype.show;
-cdb.geo.ui.Annotation.prototype.show = function() {
-    console.log("cdb.geo.ui.Annotation", this.$el);
-    ref5.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Annotation) {
+	var ref5 = cdb.geo.ui.Annotation.prototype.show;
+	cdb.geo.ui.Annotation.prototype.show = function() {
+		console.log("cdb.geo.ui.Annotation", this.$el);
+		ref5.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref6 = cdb.geo.ui.Legend.prototype.show;
-cdb.geo.ui.Legend.prototype.show = function() {
-    console.log("cdb.geo.ui.Legend", this.$el);
-    ref6.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Legend) {
+	var ref6 = cdb.geo.ui.Legend.prototype.show;
+	cdb.geo.ui.Legend.prototype.show = function() {
+		console.log("cdb.geo.ui.Legend", this.$el);
+		ref6.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref7 = cdb.geo.ui.SwitcherItem.prototype.show;
-cdb.geo.ui.SwitcherItem.prototype.show = function() {
-    console.log("cdb.geo.ui.SwitcherItem", this.$el);
-    ref7.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.SwitcherItem) {
+	var ref7 = cdb.geo.ui.SwitcherItem.prototype.show;
+	cdb.geo.ui.SwitcherItem.prototype.show = function() {
+		console.log("cdb.geo.ui.SwitcherItem", this.$el);
+		ref7.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
+}
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Infowindow) {
+	var ref8 = cdb.geo.ui.Infowindow.prototype.show;
+	cdb.geo.ui.Infowindow.prototype.show = function() {
+		console.log("cdb.geo.ui.Infowindow", this.$el);
+		ref8.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
+
+	var ref9 = cdb.geo.ui.Infowindow.prototype.show;
+	cdb.geo.ui.Infowindow.prototype.show = function() {
+		console.log("cdb.geo.ui.Infowindow", this.$el);
+		ref9.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref8 = cdb.geo.ui.Infowindow.prototype.show;
-cdb.geo.ui.Infowindow.prototype.show = function() {
-    console.log("cdb.geo.ui.Infowindow", this.$el);
-    ref8.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Header) {
+	var ref10 = cdb.geo.ui.Header.prototype.show;
+	cdb.geo.ui.Header.prototype.show = function() {
+		console.log("cdb.geo.ui.Header", this.$el);
+		ref10.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref9 = cdb.geo.ui.Infowindow.prototype.show;
-cdb.geo.ui.Infowindow.prototype.show = function() {
-    console.log("cdb.geo.ui.Infowindow", this.$el);
-    ref9.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.TilesLoader) {
+	var ref11 = cdb.geo.ui.TilesLoader.prototype.show;
+	cdb.geo.ui.TilesLoader.prototype.show = function() {
+		console.log("cdb.geo.ui.TilesLoader", this.$el);
+		ref11.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }
 
-var ref10 = cdb.geo.ui.Header.prototype.show;
-cdb.geo.ui.Header.prototype.show = function() {
-    console.log("cdb.geo.ui.Header", this.$el);
-    ref10.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
-}
-
-var ref11 = cdb.geo.ui.TilesLoader.prototype.show;
-cdb.geo.ui.TilesLoader.prototype.show = function() {
-    console.log("cdb.geo.ui.TilesLoader", this.$el);
-    ref11.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
-}
-
-var ref12 = cdb.geo.ui.Tooltip.prototype.show;
-cdb.geo.ui.Tooltip.prototype.show = function() {
-    console.log("cdb.geo.ui.Tooltip", this.$el);
-    ref12.apply(this, arguments);
-    var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
-    window.dispatchEvent( ev );
+if(cdb.geo && cdb.geo.ui && cdb.geo.ui.Tooltip) {
+	var ref12 = cdb.geo.ui.Tooltip.prototype.show;
+	cdb.geo.ui.Tooltip.prototype.show = function() {
+		console.log("cdb.geo.ui.Tooltip", this.$el);
+		ref12.apply(this, arguments);
+		var ev = new CustomEvent("i18nTranslateShow", { detail: _i18nTranslateId++ });
+		window.dispatchEvent( ev );
+	}
 }

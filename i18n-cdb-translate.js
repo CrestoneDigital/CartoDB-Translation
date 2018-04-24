@@ -25,9 +25,17 @@ i18nTranslate = (function () {
             })
         } else {
             $('div, a, li, label, input, span, h5, h4, h3, h2, h1, p, button, strong, small').each(function (idx, el) {
-                var tmp = $.i18n._($(el).text().trim())
-                if (tmp != $(el).text().trim() && $(el).children().length == 0) {
+                var tmp = $.i18n._($(el).text().toLowerCase().trim())
+                if (tmp != $(el).text().toLowerCase().trim() && $(el).children().length == 0) {
                     $(el).text(tmp)
+                } else {
+                    var tmpTxtAr = $(el).contents().filter(function(){ 
+                        return this.nodeType == 3; 
+                    }), i
+                    for(i=0; i< tmpTxtAr.length; i++) {
+                        tmp = $.i18n._(tmpTxtAr[i].nodeValue.trim().toLowerCase()) || tmpTxtAr[i].nodeValue;
+                        tmpTxtAr[i].nodeValue = tmp
+                    }
                 }
             })
 
