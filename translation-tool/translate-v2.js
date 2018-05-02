@@ -16,8 +16,9 @@ apiKey = (program.api) ? program.api : '';
 	// process.exit(0);
 // }
 
-var googleTranslate = require('google-translate')(apiKey);
-
+// var googleTranslate = require('google-translate')(apiKey);
+var googleTranslate = require('google-translate-api');
+/*
 var languages = [
    {
     "language": "af",
@@ -384,9 +385,15 @@ var languages = [
     "name": "Zulu"
    }
   ]
-
+*/
+var languages = [
+  {
+    "language": "nl",
+    "name": "Dutch"
+   }
+];
 var fnAr = [], data = {};
-var masterData = JSON.parse(fs.readFileSync(path.resolve(path.join('../languages','master.js')),'utf8').replace('var cdb_lang_file = ', ''));
+var masterData = JSON.parse(fs.readFileSync(path.resolve(path.join('../languages/','master.js')),'utf8').replace('var cdb_lang_file = ', ''));
 
 // Create missing files
 
@@ -394,11 +401,14 @@ _.each(languages, function(lng){
 	var filename = lng.language + '.i18n.js';
 	var lnprefix = lng.language;
 	fnAr.push(function(cb) {
-		fs.access(path.resolve(path.join('../languages',filename)), function (err) {
+		fs.access(path.resolve(path.join('../languages/newtest',filename)), function (err) {
 			if(err) {
-				fs.createReadStream(path.resolve(path.join('../languages/old','tpl.i18n.js'))).pipe(fs.createWriteStream(path.resolve(path.join('../languages',filename))));
-			}
-			cb();
+				fs.createReadStream(path.resolve(path.join('../languages/old','tpl.i18n.js'))).pipe(fs.createWriteStream(path.resolve(path.join('../languages/newtest',filename))));
+      }
+      setTimeout(function(){
+        cb();
+      }, 50)
+			// cb();
 		});		
 	});
 });
@@ -435,20 +445,35 @@ function translateUpdateProcess(key, callback) {
 	var fns = [];
 	_.each(languages, function(lng){
 		fns.push(function(cb){
-      var dt = fs.readFileSync(path.resolve(path.join('../languages',lng.language + '.i18n.js')),'utf8');
-      dtReplace = dt.substring(dt.indexOf('//start') + '//start'.length, dt.indexOf('//end'));
+      var dt = fs.readFileSync(path.resolve(path.join('../languages/newtest',lng.language + '.i18n.js')),'utf8');
+      var dtReplace = dt.substring(dt.indexOf('//start') + '//start'.length, dt.indexOf('//end'));
       var dtObj = JSON.parse(dtReplace.trim());
       if(!dtObj[key]) {
+/*
         googleTranslate.translate(key, 'en', lng.language, function (err, translation) {
           if(typeof translation == 'undefined'){
             cb();
           } else {
             dtObj[key] = translation.translatedText;
             dt = dt.replace(dtReplace,"\r\n" + JSON.stringify(dtObj) + "\r\n");
-            fs.writeFile(path.resolve(path.join('../languages',lng.language + '.i18n.js')), dt, 'utf8', function(err){
+            fs.writeFile(path.resolve(path.join('../languages/newtest',lng.language + '.i18n.js')), dt, 'utf8', function(err){
               cb();
             });
           }
+        })
+*/
+        googleTranslate(key, {to: lng.language})
+        .then(res => {
+          // console.log(res.text);
+          // console.log(res.from.language.iso);
+          dtObj[key] = res.text;
+          dt = dt.replace(dtReplace,"\r\n" + JSON.stringify(dtObj,null,4) + "\r\n");
+          fs.writeFile(path.resolve(path.join('../languages/newtest',lng.language + '.i18n.js')), dt, 'utf8', function(err){
+            cb();
+          });
+        })
+        .catch(err => {
+          cb();
         })
       } else {
         cb();
