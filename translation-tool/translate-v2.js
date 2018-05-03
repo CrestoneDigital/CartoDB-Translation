@@ -18,7 +18,7 @@ apiKey = (program.api) ? program.api : '';
 
 // var googleTranslate = require('google-translate')(apiKey);
 var googleTranslate = require('google-translate-api');
-/*
+
 var languages = [
    {
     "language": "af",
@@ -385,14 +385,14 @@ var languages = [
     "name": "Zulu"
    }
   ]
-*/
-var languages = [
-  {
-    "language": "nl",
-    "name": "Dutch"
-   }
-];
-var fnAr = [], data = {};
+
+// var languages = [
+//   {
+//     "language": "nl",
+//     "name": "Dutch"
+//    }
+// ];
+var fnAr = [], data = {}, ws = null;
 var masterData = JSON.parse(fs.readFileSync(path.resolve(path.join('../languages/','master.js')),'utf8').replace('var cdb_lang_file = ', ''));
 
 // Create missing files
@@ -403,12 +403,15 @@ _.each(languages, function(lng){
 	fnAr.push(function(cb) {
 		fs.access(path.resolve(path.join('../languages/newtest',filename)), function (err) {
 			if(err) {
-				fs.createReadStream(path.resolve(path.join('../languages/old','tpl.i18n.js'))).pipe(fs.createWriteStream(path.resolve(path.join('../languages/newtest',filename))));
-      }
-      setTimeout(function(){
+        ws = fs.createWriteStream(path.resolve(path.join('../languages/newtest',filename)));
+        fs.createReadStream(path.resolve(path.join('../languages/old','tpl.i18n.js'))).pipe(ws);
+        ws.on('finish', function() {
+          cb();
+        });
+				// fs.createReadStream(path.resolve(path.join('../languages/old','tpl.i18n.js'))).pipe(fs.createWriteStream(path.resolve(path.join('../languages/newtest',filename))));
+      } else {
         cb();
-      }, 50)
-			// cb();
+      }
 		});		
 	});
 });
@@ -448,6 +451,7 @@ function translateUpdateProcess(key, callback) {
       var dt = fs.readFileSync(path.resolve(path.join('../languages/newtest',lng.language + '.i18n.js')),'utf8');
       var dtReplace = dt.substring(dt.indexOf('//start') + '//start'.length, dt.indexOf('//end'));
       var dtObj = JSON.parse(dtReplace.trim());
+      // console.log('Here');
       if(!dtObj[key]) {
 /*
         googleTranslate.translate(key, 'en', lng.language, function (err, translation) {
@@ -464,7 +468,6 @@ function translateUpdateProcess(key, callback) {
 */
         googleTranslate(key, {to: lng.language})
         .then(res => {
-          // console.log(res.text);
           // console.log(res.from.language.iso);
           dtObj[key] = res.text;
           dt = dt.replace(dtReplace,"\r\n" + JSON.stringify(dtObj,null,4) + "\r\n");
@@ -476,10 +479,12 @@ function translateUpdateProcess(key, callback) {
           cb();
         })
       } else {
-        cb();
+        setTimeout(function() {
+          cb();
+        }, 1);
       }
 		});
-	});
+  });
 	async.series(fns,function(err, results) {
 		callback(true);
 	});
