@@ -16,8 +16,8 @@ apiKey = (program.api) ? program.api : '';
 	// process.exit(0);
 // }
 
-// var googleTranslate = require('google-translate')(apiKey);
-var googleTranslate = require('google-translate-api');
+var googleTranslate = require('google-translate')(apiKey);
+// var googleTranslate = require('google-translate-api');
 
 var languages = [
    {
@@ -453,19 +453,19 @@ function translateUpdateProcess(key, callback) {
       var dtObj = JSON.parse(dtReplace.trim());
       // console.log('Here');
       if(!dtObj[key]) {
-/*
+
         googleTranslate.translate(key, 'en', lng.language, function (err, translation) {
           if(typeof translation == 'undefined'){
             cb();
           } else {
             dtObj[key] = translation.translatedText;
-            dt = dt.replace(dtReplace,"\r\n" + JSON.stringify(dtObj) + "\r\n");
+            dt = dt.replace(dtReplace,"\r\n" + JSON.stringify(dtObj,null,4) + "\r\n");
             fs.writeFile(path.resolve(path.join('../languages/newtest',lng.language + '.i18n.js')), dt, 'utf8', function(err){
               cb();
             });
           }
         })
-*/
+/*
         googleTranslate(key, {to: lng.language})
         .then(res => {
           // console.log(res.from.language.iso);
@@ -478,6 +478,7 @@ function translateUpdateProcess(key, callback) {
         .catch(err => {
           cb();
         })
+*/
       } else {
         setTimeout(function() {
           cb();
