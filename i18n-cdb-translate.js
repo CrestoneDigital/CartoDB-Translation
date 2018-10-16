@@ -25,10 +25,16 @@ i18nTranslate = (function () {
             })
         } else {
             $('div, a, li, label, input, span, h5, h4, h3, h2, h1, p, button, strong, small').each(function (idx, el) {
-                var tmp = $.i18n._($(el).text().trim())
-                if (tmp != $(el).text().trim() && $(el).children().length == 0) {
+                var tmp = $.i18n._($(el).text().trim().replace(/ /g, "").replace(/\n/g, ""))
+                if (tmp != $(el).text().trim().replace(/ /g, "").replace(/\n/g, "") && $(el).children().length == 0) {
                     $(el).text(tmp)
+                } else {
+                    tmp = $.i18n._($(el).text().trim())
+                    if (tmp != $(el).text().trim() && $(el).children().length == 0) {
+                        $(el).text(tmp)
+                    }    
                 }
+
             })
 
             $('* [placeholder]').each(function (idx, el) {
