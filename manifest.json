@@ -13,6 +13,7 @@
             "https://*.carto.com/viz/*",
             "https://*.carto.com/tables/*",
             "https://*.carto.com/maps/*",
+            "https://*.carto.com/builder/*",
             "https://*.carto.com/login/*",
             "https://*.carto.com/sessions/*",
             "https://*.carto.com/u/*",
